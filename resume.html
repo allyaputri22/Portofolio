@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Resume - Allya Putri Nadila Gustin" />
+        <meta name="author" content="Allya Putri" />
+        <title>Resume - Allya Putri Nadila Gustin</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Custom Timeline Styling */
+            .timeline-container {
+                position: relative;
+                padding-left: 20px;
+                border-left: 3px solid #dee2e6;
+            }
+            .timeline-item {
+                position: relative;
+                margin-bottom: 2.5rem;
+            }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -31px;
+                top: 5px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 4px solid #0d6efd;
+                z-index: 1;
+            }
+            .timeline-item-purple::before {
+                border-color: #8f2de2; /* Warna ungu untuk organisasi */
+            }
+            .timeline-item-secondary::before {
+                border-color: #6c757d; /* Warna abu-abu untuk edukasi */
+            }
+            .card-hover {
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+            }
+            .skill-badge {
+                font-size: 0.85rem;
+                padding: 0.6rem 1rem;
+                background-color: #f8f9fa;
+                color: #212529;
+                border: 1px solid #e9ecef;
+                transition: all 0.2s ease;
+            }
+            .skill-badge:hover {
+                background-color: #0d6efd;
+                color: #fff;
+                border-color: #0d6efd;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Personal Portofolio</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Page Content-->
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline">Resume</span></h1>
+                    <p class="lead text-muted">My professional journey, organizational experiences, education, and technical skills.</p>
+                </div>
+                
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        
+                  <!-- EXPERIENCE SECTION (KERJA) -->
+                        <section class="mb-5">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0 d-flex align-items-center">
+                                    <i class="bi bi-briefcase-fill me-2"></i> Work Experience
+                                </h2>
+                                <!-- Download CV langsung lewat Google Drive -->
+                                <a class="btn btn-primary px-4 py-2 shadow-sm rounded-pill d-flex align-items-center" 
+                                href="https://drive.google.com/drive/folders/11laFNaN8J3pqp0CznloIYrzTaJNjr-Yr?usp=drive_link" 
+                                target="_blank">
+                                    <i class="bi-download me-2"></i>
+                                    Download CV
+                                </a>
+                            </div>
+                            
+                            <div class="timeline-container">
+                                <!-- Experience 1 -->
+                                <div class="timeline-item">
+                                    <div class="card card-hover border-0 shadow-sm rounded-4">
+                                        <div class="card-body p-4">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-4 mb-3 mb-md-0">
+                                                    <span class="badge bg-primary mb-2">Nov 2025 - Jun 2026</span>
+                                                    <h5 class="fw-bolder mb-1">Rice Disease Classification Using MobileNetV2 Architecture </h5>
+                                                    <p class="text-muted small mb-0">Machine Learning for Thesis.</p>
+                                                    <p class="text-muted small">Kabupaten Bekasi</p>
+                                                    <!-- Bukti Gambar Kegiatan Kerja 1 -->
+                                                    <img src="assets\rice-leaf-diseasea.png" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="Streamlit Rice Disease App Dashboard" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p class="mb-2 text-dark">Developed and evaluated a Machine Learning-based classification system for rice plant diseases to optimize agricultural diagnostics.</p>
+                                                    <ul class="small text-muted ps-3 mb-0">
+                                                        <li>Developed a Computer Vision model utilizing CNN and MobileNetV2 architecture with transfer learning to classify rice leaf diseases across 4 distinct classes.</li>
+                                                        <li>Processed and engineered a dataset of 4,000+ image samples, achieving a 95% classification accuracy during model validation using real-world field data.</li>
+                                                        <li>Integrated the trained deep learning model into an interactive Streamlit web application to enable efficient, real-time user evaluations.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Experience 2 -->
+                                <div class="timeline-item">
+                                    <div class="card card-hover border-0 shadow-sm rounded-4">
+                                        <div class="card-body p-4">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-4 mb-3 mb-md-0">
+                                                    <span class="badge bg-primary mb-2">Mar 2025 - Jul 2025</span>
+                                                    <h5 class="fw-bolder mb-1">Web Systems Developer</h5>
+                                                    <p class="text-muted small mb-0">PT Kalbe Farma Tbk.</p>
+                                                    <p class="text-muted small">Cikarang, Bekasi</p>
+                                                    <!-- Bukti Gambar Kegiatan Kerja 2 -->
+                                                    <img src="assets/intern-kalbe.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="PT Kalbe Farma Tbk Project Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p class="mb-2 text-dark">Developed and managed internal digital administration systems to optimize operational processes within the Human Capital division.</p>
+                                                    <ul class="small text-muted ps-3 mb-0">
+                                                        <li>Developed and maintained 3 internal corporate web applications leveraging the Laravel framework to streamline business operations.</li>
+                                                        <li>Diagnosed, debugged, and optimized system performance, significantly reducing latency and ensuring high platform stability.</li>
+                                                        <li>Revamped UI/UX components based on user feedback to enhance accessibility and overall user engagement.</li>
+                                                        <li>Facilitated seamless data integration by connecting front-end interfaces with internal RESTful APIs.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Experience 3 -->
+                                <div class="timeline-item">
+                                    <div class="card card-hover border-0 shadow-sm rounded-4">
+                                        <div class="card-body p-4">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-4 mb-3 mb-md-0">
+                                                    <span class="badge bg-primary mb-2">2023 - Present</span>
+                                                    <h5 class="fw-bolder mb-1">Freelance PIC Event</h5>
+                                                    <p class="text-muted small mb-0">Playdate By RF</p>
+                                                    <p class="text-muted small">Bekasi, Indonesia</p>
+                                                    <!-- Bukti Gambar Kegiatan Kerja 3 -->
+                                                    <img src="assets/freelance.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="Playdate Event Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p class="mb-2 text-dark">Coordinated and executed educational study tours (C-Taditur) to deliver engaging and secure outdoor learning experiences for children.</p>
+                                                    <ul class="small text-muted ps-3 mb-0">
+                                                        <li>Successfully managed the operations and logistics for 20+ large-scale events during peak school holiday seasons.</li>
+                                                        <li>Led groups of 30+ children per event, ensuring absolute safety, active engagement, and seamless itinerary execution at institutional venues such as Fire Stations, Police Departments, and Railway Stations.</li>
+                                                        <li>Handled high-level B2B negotiations and secured formal collaboration agreements with institutional authorities to establish official tour locations.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- ORGANIZATIONAL EXPERIENCE SECTION -->
+                        <section class="mb-5">
+    <h2 class="text-gradient d-inline-block fw-bolder mb-4 d-flex align-items-center" style="background: linear-gradient(45deg, #8f2de2, #4e008e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <i class="bi bi-people-fill me-2 text-purple" style="color: #8f2de2;"></i> Organizational Experience
+    </h2>
+    
+    <div class="timeline-container">
+        <!-- Pengalaman 1: BEM Unsika -->
+        <div class="timeline-item timeline-item-purple">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">Jan 2024 - Jan 2025</span>
+                            <h5 class="fw-bolder mb-1">Treasurer of the Ministry of Research and Science</h5>
+                            <p class="text-muted small mb-0">Badan Eksekutif Mahasiswa (BEM)</p>
+                            <p class="text-muted small">Universitas Singaperbangsa Karawang</p>
+                            <!-- Bukti Gambar Organisasi 1 -->
+                            <img src="assets/bem.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="BEM Unsika Ministry Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Formulated and managed the annual budget plan (RAB) for ministry programs, coordinating directly with the General Treasurer of BEM for fund approval and allocation.</li>
+                                <li>Managed precise financial administration and drafted comprehensive accountability reports (LPJ) to ensure absolute transparency across all ministry expenditures.</li>
+                                <li>Contributed actively to the planning and execution of core ministry work plans, including national seminars, workshops, and scientific research events.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pengalaman 2: PKKMB Unsika (Panitia) -->
+        <div class="timeline-item timeline-item-purple">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">Aug 2024 - Sep 2024</span>
+                            <h5 class="fw-bolder mb-1">Event Division</h5>
+                            <p class="text-muted small mb-0">PKKMB Universitas Singaperbangsa Karawang</p>
+                            <p class="text-muted small">Panitia Kampus</p>
+                            <!-- Bukti Gambar Organisasi 2 -->
+                            <img src="assets/acarapkkmb.png" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="PKKMB Unsika Event Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Designed the core concept, detailed rundowns, and technical execution plans for a university-wide orientation event welcoming over 4,000+ freshman students.</li>
+                                <li>Led and moderated the pre-orientation socialization sessions, effectively guiding new students through university regulations, event requirements, and preparation procedures.</li>
+                                <li>Coordinated cross-functional committees and on-field execution to ensure smooth transition times, crowd control, and strict adherence to the event timeline.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pengalaman 3: Seminar Nasional Karya Tulis Ilmiah (Panitia) -->
+        <div class="timeline-item timeline-item-purple">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">May 2024 - Aug 2024</span>
+                            <h5 class="fw-bolder mb-1">Head of Organizing Committee</h5>
+                            <p class="text-muted small mb-0">Seminar Nasional Karya Tulis Ilmiah</p>
+                            <p class="text-muted small">Panitia Nasional</p>
+                            <!-- Bukti Gambar Organisasi 3 -->
+                            <img src="assets/keplak.png" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="National Seminar Organizing Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Led a committee of 40 members to plan and execute a National Scientific Writing Seminar, successfully managing over 700 participants.</li>
+                                <li>Directed core strategic meetings and supervised task delegation across all divisions to ensure operations aligned with established objectives.</li>
+                                <li>Served as the primary liaison for stakeholders, successfully securing 10+ corporate sponsors and 10+ media partners while delivering swift on-site problem solving.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pengalaman 4: HIMATIKA Unsika -->
+        <div class="timeline-item timeline-item-purple">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">Jan 2023 - Dec 2023</span>
+                            <h5 class="fw-bolder mb-1">Treasurer of Research & Development Division</h5>
+                            <p class="text-muted small mb-0">Himpunan Mahasiswa Informatika (HIMATIKA)</p>
+                            <p class="text-muted small">Universitas Singaperbangsa Karawang</p>
+                            <!-- Bukti Gambar Organisasi 4 -->
+                            <img src="assets/hima2.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="Himatika Unsika Project Showcase" style="max-height: 130px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Managed the division’s internal budget allocation and generated precise financial reports to maintain transparency in all R&D operations.</li>
+                                <li>Conducted comprehensive research for organizational product development, focusing on enhancing features, functionality, and user experience (UX) for websites and applications.</li>
+                                <li>Analyzed technical requirements and proposed innovative features to optimize the overall performance and usability of digital products.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pengalaman 5: SHARE - IT -->
+        <div class="timeline-item timeline-item-purple">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">Mar 2023 - May 2023</span>
+                            <h5 class="fw-bolder mb-1">Treasurer</h5>
+                            <p class="text-muted small mb-0">SHARE – IT</p>
+                            <p class="text-muted small">Kepanitiaan IoT Proyek</p>
+                            <!-- Bukti Gambar Organisasi 5 -->
+                            <img src="assets/hima.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="IoT Smoke Detection Project Development" style="max-height: 130px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Formulated the Budget Plan (RAB) and managed a total fund of IDR 5,000,000+ for an IoT-based cigarette smoke detection project.</li>
+                                <li>Controlled and distributed project funds efficiently to support the operational needs of 35 committee members and 50+ participants.</li>
+                                <li>Developed comprehensive financial accountability reports (LPJ) to ensure absolute transparency and precise expenditure tracking.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                      <!-- EDUCATION SECTION -->
+<section class="mb-5">
+    <h2 class="text-gradient d-inline-block fw-bolder mb-4 d-flex align-items-center" style="background: linear-gradient(45deg, #8f2de2, #4e008e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <i class="bi bi-mortarboard-fill me-2" style="color: #8f2de2;"></i> Education
+    </h2>
+    
+    <div class="timeline-container">
+        <!-- Education 1: Universitas Singaperbangsa Karawang -->
+        <div class="timeline-item timeline-item-purple mb-4">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">Sep 2022 - Jun 2026</span>
+                            <h5 class="fw-bolder mb-1">Bachelor of Computer Science in Informatics</h5>
+                            <p class="text-muted small mb-0">Universitas Singaperbangsa Karawang</p>
+                            <p class="text-muted small">Karawang, Indonesia</p>
+                            <div class="mt-2 fw-bold text-dark small mb-3">GPA: 3.90 / 4.00</div>
+                            <!-- Bukti Gambar Edukasi 1 (Logo Kampus / Foto Almamater) -->
+                            <img src="assets/skom.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="UNSIKA Campus Location" style="max-height: 120px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="mb-2 text-dark">Academic focus on Artificial Intelligence implementation for agricultural optimization and Internet of Things (IoT) systems automation.</p>
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li><strong>Thesis Research:</strong> Classification of rice plant diseases (Bacterial Leaf Blight & Leaf Blast) utilizing the <strong>MobileNetV2</strong> architecture with Transfer Learning in Karangraharja Village.</li>
+                                <li>Applied structured data processing pipelines and post-split data augmentation techniques to prevent data leakage and ensure robust training validity.</li>
+                                <li><strong>Relevant Coursework:</strong> Artificial Intelligence, Machine Learning, Web-Based Programming, Laravel Framework, Data Mining, Object-Oriented Analysis & Design, Business Intelligence, Big Data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education 2: SMA Negeri 1 Panggul -->
+        <div class="timeline-item timeline-item-purple">
+            <div class="card card-hover border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row align-items-start">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <span class="badge mb-2" style="background-color: #8f2de2;">Jul 2019 - May 2022</span>
+                            <h5 class="fw-bolder mb-1">Natural Sciences (IPA)</h5>
+                            <p class="text-muted small mb-0">SMA Negeri 1 Panggul</p>
+                            <p class="text-muted small">Trenggalek, Indonesia</p>
+                            <div class="mt-2 fw-bold text-dark small mb-3">Final Score: 86.00 / 100.00</div>
+                            <!-- Bukti Gambar Edukasi 2 -->
+                            <img src="assets/sma.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="SMA Negeri 1 Panggul" style="max-height: 120px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="mb-0 text-muted small">Focused on foundational core sciences, mathematical logic, and analytical problem-solving to build a strong basis for higher computing education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="mb-5">
+    <h2 class="text-gradient d-inline-block fw-bolder mb-4 d-flex align-items-center" style="background: linear-gradient(45deg, #8f2de2, #4e008e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <i class="bi bi-cpu-fill me-2" style="color: #8f2de2;"></i> Technical Skills
+    </h2>
+    <div class="card border-0 shadow-sm rounded-4 bg-white">
+        <div class="card-body p-4">
+            <!-- Languages & Databases -->
+            <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="feature bg-purple text-white rounded-3 me-3 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; background-color: #8f2de2;">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h5 class="fw-bolder mb-0">Languages & Databases</h5>
+                </div>
+                <div class="d-flex flex-wrap gap-2 ps-5">
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Python</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">SQL</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">C++</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">JavaScript</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">PHP</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">HTML & CSS</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">MySQL</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">PostgreSQL</span>
+                </div>
+            </div>
+
+            <!-- Frameworks & Libraries -->
+            <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="feature bg-purple text-white rounded-3 me-3 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; background-color: #8f2de2;">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <h5 class="fw-bolder mb-0">Frameworks & Libraries</h5>
+                </div>
+                <div class="d-flex flex-wrap gap-2 ps-5">
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Laravel</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Streamlit</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Flask</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Flutter</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Bootstrap</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">TensorFlow / Keras</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Pandas</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">NumPy</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Scikit-learn</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Matplotlib</span>
+                </div>
+            </div>
+
+            <!-- Tools & Design -->
+            <div class="mb-0">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="feature bg-purple text-white rounded-3 me-3 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; background-color: #8f2de2;">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <h5 class="fw-bolder mb-0">Tools & Design</h5>
+                </div>
+                <div class="d-flex flex-wrap gap-2 ps-5">
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Git / GitHub</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Google Colab</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Visual Studio Code</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Microsoft Excel</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Figma (UI/UX)</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Canva</span>
+                    <span class="badge rounded-pill text-dark border px-3 py-2" style="background-color: #f8f9fa;">Adobe Illustrator</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AWARDS & CERTIFICATIONS SECTION -->
+<section class="mb-5">
+    <h2 class="text-gradient d-inline-block fw-bolder mb-4 d-flex align-items-center" style="background: linear-gradient(45deg, #8f2de2, #4e008e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <i class="bi bi-trophy-fill me-2" style="color: #8f2de2;"></i> Awards & Certifications
+    </h2>
+    
+    <div class="row">
+        <!-- Column 1: Awards -->
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="card border-0 shadow-sm rounded-4 h-100 bg-white">
+                <div class="card-body p-4">
+                    <h5 class="fw-bolder text-dark mb-4 d-flex align-items-center">
+                        <i class="bi bi-award text-purple me-2" style="color: #8f2de2;"></i> Competitions & Awards
+                    </h5>
+                    
+                    <div class="mb-3 pb-3 border-bottom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h6 class="fw-bold mb-1 text-dark">1st Place Winner - National Scientific Writing Competition</h6>
+                            <span class="badge bg-light text-dark border">2024</span>
+                        </div>
+                        <p class="text-muted small mb-2">IESTF | Developed an IoT-based industrial automation system for Autonomous Guided Vehicles (AGV) designed for factory material handling.</p>
+                        <!-- Bukti Sertifikat / Foto Menang 1 -->
+                        <img src="assets/ffa.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="1st Place IESTF Award Certificate" style="max-height: 100px; object-fit: cover;">
+                    </div>
+
+                    <div class="mb-3 pb-3 border-bottom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h6 class="fw-bold mb-1 text-dark">1st Place Winner - National Scientific Writing Competition</h6>
+                            <span class="badge bg-light text-dark border">2025</span>
+                        </div>
+                        <p class="text-muted small mb-2">SPECTRA | Designed an IoT-based automation system that recycles waste cooking oil into eco-friendly soap using smart monitoring sensors.</p>
+                        <!-- Bukti Sertifikat / Foto Menang 2 -->
+                        <img src="assets/spectra.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="1st Place SPECTRA Award" style="max-height: 100px; object-fit: cover;">
+                    </div>
+
+                    <div class="mb-0">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h6 class="fw-bold mb-1 text-dark">1st Place Winner - University-Level Scientific Writing</h6>
+                            <span class="badge bg-light text-dark border">2025</span>
+                        </div>
+                        <p class="text-muted small mb-2">AGROTECH | Engineered an innovative automated agricultural technology system to optimize crop management and sustainable farming.</p>
+                        <!-- Bukti Sertifikat / Foto Menang 3 -->
+                        <img src="assets/agribisnis.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="1st Place AGROTECH Award" style="max-height: 100px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Certifications -->
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100 bg-white">
+                <div class="card-body p-4">
+                    <h5 class="fw-bolder text-dark mb-4 d-flex align-items-center">
+                        <i class="bi bi-patch-check text-purple me-2" style="color: #8f2de2;"></i> Professional Certifications
+                    </h5>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="feature bg-light border text-dark rounded-3 me-3 p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-file-earmark-code"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold mb-0 text-dark">Junior Web Developer</h6>
+                            <p class="text-muted small mb-1">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                            <span class="badge bg-light text-muted border small mb-2">Okt 2023 - Okt 2026</span>
+                            <br>
+                            <!-- Bukti Mini Logo BNSP / Badge Sertifikasi -->
+                            <img src="assets/jwd.jpg" class="img-fluid rounded-3 border shadow-sm" alt="BNSP Junior Web Developer Certificate" style="max-height: 80px; object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="feature bg-light border text-dark rounded-3 me-3 p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="fw-bold mb-0 text-dark">Junior Graphic Designer</h6>
+                            <p class="text-muted small mb-1">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                            <span class="badge bg-light text-muted border small mb-2">Okt 2023 - Okt 2026</span>
+                            <br>
+                            <!-- Bukti Mini Logo BNSP / Badge Sertifikasi -->
+                            <img src="assets/jgd.jpg" class="img-fluid rounded-3 border shadow-sm" alt="BNSP Junior Graphic Designer Certificate" style="max-height: 80px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto shadow-sm">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-center flex-column flex-sm-row">
+                    <div class="col-auto">
+                        <div class="small m-0">Copyright &copy; Allya Putri Nadila Gustin 2026</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
