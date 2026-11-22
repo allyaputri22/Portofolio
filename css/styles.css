@@ -11569,6 +11569,42 @@ html {
   border-radius: 1rem !important;
 }
 
+/* ---------- Site header (sticky, active page highlighted) ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: #fff;
+  border-bottom: 1px solid #ecebf3;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+.site-header .navbar-nav .nav-link {
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.6rem;
+  color: #495057;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.site-header .navbar-nav .nav-link:hover {
+  color: #6a1bb0;
+  background-color: #f4eefc;
+}
+.site-header .navbar-nav .nav-link.active {
+  color: #fff !important;
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  box-shadow: 0 6px 14px rgba(126, 40, 190, 0.25);
+}
+@media (max-width: 991.98px) {
+  .site-header .navbar-nav {
+    margin-top: 0.5rem;
+  }
+  .site-header .navbar-nav .nav-link {
+    padding: 0.55rem 0.85rem;
+  }
+  .site-header .navbar-nav .nav-item + .nav-item {
+    margin-top: 0.25rem;
+  }
+}
+
 .feature {
   display: inline-flex;
   align-items: center;

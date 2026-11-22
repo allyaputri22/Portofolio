@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -66,21 +66,114 @@
                 border-color: #0d6efd;
                 transform: scale(1.05);
             }
+                    /* --- Lightbox gambar (klik gambar kecil untuk lihat ukuran penuh) --- */
+            img.js-zoom {
+                cursor: zoom-in;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            img.js-zoom:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18) !important;
+            }
+            .lightbox {
+                position: fixed;
+                inset: 0;
+                background: rgba(9, 8, 14, 0.94);
+                z-index: 2100;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .lightbox.open {
+                display: flex;
+            }
+            .lightbox-img-wrap {
+                max-width: min(1200px, 94vw);
+                max-height: 82vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+            .lightbox img {
+                max-width: 100%;
+                max-height: 74vh;
+                object-fit: contain;
+                border-radius: 0.75rem;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+                background: #111;
+            }
+            .lightbox-caption {
+                color: #e9e6f2;
+                font-size: 0.9rem;
+                text-align: center;
+                padding: 0 0.5rem;
+            }
+            .lightbox-close,
+            .lightbox-nav {
+                position: fixed;
+                z-index: 2110;
+                border: 0;
+                background: rgba(255, 255, 255, 0.12);
+                color: #fff;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.3rem;
+            }
+            .lightbox-close:hover,
+            .lightbox-nav:hover {
+                background: rgba(143, 45, 226, 0.85);
+            }
+            .lightbox-close {
+                top: 1rem;
+                right: 1rem;
+            }
+            .lightbox-nav.prev {
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .lightbox-nav.next {
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .lightbox-counter {
+                position: fixed;
+                top: 1.2rem;
+                left: 1.2rem;
+                color: #cfc8de;
+                font-size: 0.85rem;
+                letter-spacing: 0.04em;
+            }
+            body.lightbox-open {
+                overflow: hidden;
+            }
+            @media (max-width: 575.98px) {
+                .lightbox-nav { width: 38px; height: 38px; font-size: 1rem; }
+                .lightbox-close { width: 38px; height: 38px; }
+            }
         </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+            <nav class="navbar navbar-expand-lg navbar-light site-header py-3">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Personal Portofolio</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="resume.html"><i class="bi bi-file-earmark-person me-1"></i>Resume</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-grid-3x3-gap me-1"></i>Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,7 +205,33 @@
                             </div>
                             
                             <div class="timeline-container">
-                                <!-- Experience 1 -->
+                                <!-- Experience 1: Adyawinsa -->
+                                <div class="timeline-item">
+                                    <div class="card card-hover border-0 shadow-sm rounded-4">
+                                        <div class="card-body p-4">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-4 mb-3 mb-md-0">
+                                                    <span class="badge bg-primary mb-2">Aug 2026 - Feb 2027</span>
+                                                    <h5 class="fw-bolder mb-1">ERP Migration &amp; systems Intern</h5>
+                                                    <p class="text-muted small mb-0">PT. Adyawinsa Plastic Industry</p>
+                                                    <p class="text-muted small">Cikarang, Indonesia</p>
+                                                    <!-- Bukti Gambar Kegiatan Kerja 1 -->
+                                                    <img src="assets/erp.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="PT Adyawinsa Plastic Industry ERP Internship Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p class="mb-2 text-dark">Supported the ERP system development and data migration process to improve production, inventory, and administration workflows across divisions.</p>
+                                                    <ul class="small text-muted ps-3 mb-0">
+                                                        <li>Developed 5+ Work Instructions (WI) and User Manual Books to document ERP workflows and standard operating procedures across 4 key business processes: procurement, production, inventory, and sales.</li>
+                                                        <li>Conducted user training and provided hands on guidance to support ERP adoption across 9+ departments, ensuring alignment between system operations and business process requirements.</li>
+                                                        <li>Performed ERP troubleshooting and SQL-based database analysis to investigate transaction issues, identify data discrepancies, and support system improvements.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Experience 2 -->
                                 <div class="timeline-item">
                                     <div class="card card-hover border-0 shadow-sm rounded-4">
                                         <div class="card-body p-4">
@@ -122,8 +241,8 @@
                                                     <h5 class="fw-bolder mb-1">Rice Disease Classification Using MobileNetV2 Architecture </h5>
                                                     <p class="text-muted small mb-0">Machine Learning for Thesis.</p>
                                                     <p class="text-muted small">Kabupaten Bekasi</p>
-                                                    <!-- Bukti Gambar Kegiatan Kerja 1 -->
-                                                    <img src="assets\rice-leaf-diseasea.png" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="Streamlit Rice Disease App Dashboard" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                    <!-- Bukti Gambar Kegiatan Kerja 2 -->
+                                                    <img src="assets\rice-leaf-diseasea.png" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="Streamlit Rice Disease App Dashboard" style="max-height: 150px; width: 100%; object-fit: cover;">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <p class="mb-2 text-dark">Developed and evaluated a Machine Learning-based classification system for rice plant diseases to optimize agricultural diagnostics.</p>
@@ -137,7 +256,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Experience 2 -->
+                                <!-- Experience 3 -->
                                 <div class="timeline-item">
                                     <div class="card card-hover border-0 shadow-sm rounded-4">
                                         <div class="card-body p-4">
@@ -147,8 +266,8 @@
                                                     <h5 class="fw-bolder mb-1">Web Systems Developer</h5>
                                                     <p class="text-muted small mb-0">PT Kalbe Farma Tbk.</p>
                                                     <p class="text-muted small">Cikarang, Bekasi</p>
-                                                    <!-- Bukti Gambar Kegiatan Kerja 2 -->
-                                                    <img src="assets/intern-kalbe.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="PT Kalbe Farma Tbk Project Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                    <!-- Bukti Gambar Kegiatan Kerja 3 -->
+                                                    <img src="assets/intern-kalbe.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="PT Kalbe Farma Tbk Project Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <p class="mb-2 text-dark">Developed and managed internal digital administration systems to optimize operational processes within the Human Capital division.</p>
@@ -164,7 +283,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Experience 3 -->
+                                <!-- Experience 4 -->
                                 <div class="timeline-item">
                                     <div class="card card-hover border-0 shadow-sm rounded-4">
                                         <div class="card-body p-4">
@@ -174,8 +293,8 @@
                                                     <h5 class="fw-bolder mb-1">Freelance PIC Event</h5>
                                                     <p class="text-muted small mb-0">Playdate By RF</p>
                                                     <p class="text-muted small">Bekasi, Indonesia</p>
-                                                    <!-- Bukti Gambar Kegiatan Kerja 3 -->
-                                                    <img src="assets/freelance.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="Playdate Event Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
+                                                    <!-- Bukti Gambar Kegiatan Kerja 4 -->
+                                                    <img src="assets/freelance.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="Playdate Event Documentation" style="max-height: 150px; width: 100%; object-fit: cover;">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <p class="mb-2 text-dark">Coordinated and executed educational study tours (C-Taditur) to deliver engaging and secure outdoor learning experiences for children.</p>
@@ -210,7 +329,7 @@
                             <p class="text-muted small mb-0">Badan Eksekutif Mahasiswa (BEM)</p>
                             <p class="text-muted small">Universitas Singaperbangsa Karawang</p>
                             <!-- Bukti Gambar Organisasi 1 -->
-                            <img src="assets/bem.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="BEM Unsika Ministry Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
+                            <img src="assets/bem.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="BEM Unsika Ministry Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <ul class="small text-muted ps-3 mb-0">
@@ -235,7 +354,7 @@
                             <p class="text-muted small mb-0">PKKMB Universitas Singaperbangsa Karawang</p>
                             <p class="text-muted small">Panitia Kampus</p>
                             <!-- Bukti Gambar Organisasi 2 -->
-                            <img src="assets/acarapkkmb.png" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="PKKMB Unsika Event Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
+                            <img src="assets/acarapkkmb.png" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="PKKMB Unsika Event Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <ul class="small text-muted ps-3 mb-0">
@@ -260,7 +379,7 @@
                             <p class="text-muted small mb-0">Seminar Nasional Karya Tulis Ilmiah</p>
                             <p class="text-muted small">Panitia Nasional</p>
                             <!-- Bukti Gambar Organisasi 3 -->
-                            <img src="assets/keplak.png" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="National Seminar Organizing Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
+                            <img src="assets/keplak.png" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="National Seminar Organizing Documentation" style="max-height: 130px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <ul class="small text-muted ps-3 mb-0">
@@ -285,7 +404,7 @@
                             <p class="text-muted small mb-0">Himpunan Mahasiswa Informatika (HIMATIKA)</p>
                             <p class="text-muted small">Universitas Singaperbangsa Karawang</p>
                             <!-- Bukti Gambar Organisasi 4 -->
-                            <img src="assets/hima2.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="Himatika Unsika Project Showcase" style="max-height: 130px; width: 100%; object-fit: cover;">
+                            <img src="assets/hima2.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="Himatika Unsika Project Showcase" style="max-height: 130px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <ul class="small text-muted ps-3 mb-0">
@@ -310,7 +429,7 @@
                             <p class="text-muted small mb-0">SHARE – IT</p>
                             <p class="text-muted small">Kepanitiaan IoT Proyek</p>
                             <!-- Bukti Gambar Organisasi 5 -->
-                            <img src="assets/hima.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm" alt="IoT Smoke Detection Project Development" style="max-height: 130px; width: 100%; object-fit: cover;">
+                            <img src="assets/hima.jpeg" class="img-fluid rounded-3 mt-3 border shadow-sm js-zoom" alt="IoT Smoke Detection Project Development" style="max-height: 130px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <ul class="small text-muted ps-3 mb-0">
@@ -345,7 +464,7 @@
                             <p class="text-muted small">Karawang, Indonesia</p>
                             <div class="mt-2 fw-bold text-dark small mb-3">GPA: 3.90 / 4.00</div>
                             <!-- Bukti Gambar Edukasi 1 (Logo Kampus / Foto Almamater) -->
-                            <img src="assets/skom.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="UNSIKA Campus Location" style="max-height: 120px; width: 100%; object-fit: cover;">
+                            <img src="assets/skom.jpeg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="UNSIKA Campus Location" style="max-height: 120px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <p class="mb-2 text-dark">Academic focus on Artificial Intelligence implementation for agricultural optimization and Internet of Things (IoT) systems automation.</p>
@@ -372,7 +491,7 @@
                             <p class="text-muted small">Trenggalek, Indonesia</p>
                             <div class="mt-2 fw-bold text-dark small mb-3">Final Score: 86.00 / 100.00</div>
                             <!-- Bukti Gambar Edukasi 2 -->
-                            <img src="assets/sma.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="SMA Negeri 1 Panggul" style="max-height: 120px; width: 100%; object-fit: cover;">
+                            <img src="assets/sma.jpeg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="SMA Negeri 1 Panggul" style="max-height: 120px; width: 100%; object-fit: cover;">
                         </div>
                         <div class="col-md-8">
                             <p class="mb-0 text-muted small">Focused on foundational core sciences, mathematical logic, and analytical problem-solving to build a strong basis for higher computing education.</p>
@@ -477,7 +596,7 @@
                         </div>
                         <p class="text-muted small mb-2">IESTF | Developed an IoT-based industrial automation system for Autonomous Guided Vehicles (AGV) designed for factory material handling.</p>
                         <!-- Bukti Sertifikat / Foto Menang 1 -->
-                        <img src="assets/ffa.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="1st Place IESTF Award Certificate" style="max-height: 100px; object-fit: cover;">
+                        <img src="assets/ffa.jpeg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="1st Place IESTF Award Certificate" style="max-height: 100px; object-fit: cover;">
                     </div>
 
                     <div class="mb-3 pb-3 border-bottom">
@@ -487,7 +606,7 @@
                         </div>
                         <p class="text-muted small mb-2">SPECTRA | Designed an IoT-based automation system that recycles waste cooking oil into eco-friendly soap using smart monitoring sensors.</p>
                         <!-- Bukti Sertifikat / Foto Menang 2 -->
-                        <img src="assets/spectra.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="1st Place SPECTRA Award" style="max-height: 100px; object-fit: cover;">
+                        <img src="assets/spectra.jpeg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="1st Place SPECTRA Award" style="max-height: 100px; object-fit: cover;">
                     </div>
 
                     <div class="mb-0">
@@ -497,7 +616,7 @@
                         </div>
                         <p class="text-muted small mb-2">AGROTECH | Engineered an innovative automated agricultural technology system to optimize crop management and sustainable farming.</p>
                         <!-- Bukti Sertifikat / Foto Menang 3 -->
-                        <img src="assets/agribisnis.jpeg" class="img-fluid rounded-3 border shadow-sm" alt="1st Place AGROTECH Award" style="max-height: 100px; object-fit: cover;">
+                        <img src="assets/agribisnis.jpeg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="1st Place AGROTECH Award" style="max-height: 100px; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -521,7 +640,7 @@
                             <span class="badge bg-light text-muted border small mb-2">Okt 2023 - Okt 2026</span>
                             <br>
                             <!-- Bukti Mini Logo BNSP / Badge Sertifikasi -->
-                            <img src="assets/jwd.jpg" class="img-fluid rounded-3 border shadow-sm" alt="BNSP Junior Web Developer Certificate" style="max-height: 80px; object-fit: cover;">
+                            <img src="assets/jwd.jpg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="BNSP Junior Web Developer Certificate" style="max-height: 80px; object-fit: cover;">
                         </div>
                     </div>
 
@@ -535,7 +654,7 @@
                             <span class="badge bg-light text-muted border small mb-2">Okt 2023 - Okt 2026</span>
                             <br>
                             <!-- Bukti Mini Logo BNSP / Badge Sertifikasi -->
-                            <img src="assets/jgd.jpg" class="img-fluid rounded-3 border shadow-sm" alt="BNSP Junior Graphic Designer Certificate" style="max-height: 80px; object-fit: cover;">
+                            <img src="assets/jgd.jpg" class="img-fluid rounded-3 border shadow-sm js-zoom" alt="BNSP Junior Graphic Designer Certificate" style="max-height: 80px; object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -548,7 +667,18 @@
                 </div>
             </div>
         </main>
-        
+        <!-- LIGHTBOX: klik gambar untuk melihat ukuran penuh -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+            <button class="lightbox-close" type="button" aria-label="Close image viewer"><i class="bi bi-x-lg"></i></button>
+            <button class="lightbox-nav prev" type="button" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <div class="lightbox-img-wrap">
+                <img src="" alt="Enlarged image" id="lightboxImg" />
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+            <button class="lightbox-nav next" type="button" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto shadow-sm">
             <div class="container px-5">
@@ -564,5 +694,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="lightbox.js"></script>
     </body>
 </html>
+
+
